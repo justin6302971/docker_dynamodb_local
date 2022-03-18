@@ -1,0 +1,15 @@
+# canonical configuration
+version: "3.8"
+
+services:
+    dynamodb-local:
+        container_name: local_dynamodb_${ENVTYPE}
+        image: amazon/dynamodb-local:1.18.0
+        networks:
+            - local_dynamodb-nw
+networks:
+    local_dynamodb-nw:
+        name: local_dynamodb-nw
+
+        
+  
